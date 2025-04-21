@@ -101,7 +101,7 @@ export default function Home() {
           
           {/* Scroll down button */}
           <div className="absolute bottom-8 right-8">
-            <a href="#docs">
+            <Link href="/docs">
               <Button
                 variant="ghost"
                 size="lg"
@@ -109,7 +109,7 @@ export default function Home() {
               >
                 <ChevronDown className="h-8 w-8 text-[#5E2605] group-hover:text-white animate-bounce" />
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
