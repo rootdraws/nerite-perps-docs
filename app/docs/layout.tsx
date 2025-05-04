@@ -1,5 +1,4 @@
 import type React from "react"
-import { DocsSidebar } from "@/components/docs/docs-sidebar"
 import { Inter, Playfair_Display } from "next/font/google"
 import type { Metadata } from "next"
 
@@ -12,8 +11,8 @@ const playfair = Playfair_Display({
 
 // Define metadata for SEO and browser tabs
 export const metadata: Metadata = {
-  title: "STICKY . MONEY - Documentation",
-  description: "Documentation for STICKY.MONEY - A BSC-Native Lending Co-Operative",
+  title: "STICKY.MONEY",
+  description: "A veTrading Co-Operative, on Corn.",
 }
 
 export default function DocsLayout({
@@ -28,7 +27,6 @@ export default function DocsLayout({
         {/* Left Column - Navigation */}
         <div className="bg-[#FFF5E1] w-1/4 fixed top-0 left-0 h-screen">
           <div className="h-full p-6">
-            <DocsSidebar />
           </div>
         </div>
 

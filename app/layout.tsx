@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 // Define metadata for SEO and browser tabs
 export const metadata: Metadata = {
   title: "Sticky Money",
-  description: "A BSC-Native Lending Co-Operative",
+  description: "A veTrading Co-Operative, on Corn.",
 }
 
 export default function RootLayout({
