@@ -66,6 +66,15 @@ const config: Config = {
           golden: "#D87E0A", // Golden amber
           light: "#DC940F", // Light golden amber
         },
+        brand: {
+          teal: "#8EAEB6", // Hero banner teal
+          cocoa: "#5E2605", // Cocoa text / border
+          mustard: "#DC940F", // Mustard accent
+          orange: "#FF8C42", // Bright orange accent / hover
+          green: "#1A3E2D", // Logo green
+          cream: "#FFF5E1", // Light cream background
+          peach: "#FFE5B4", // Soft peach background
+        },
         black: "#0A0A0A", // Very dark background
       },
       borderRadius: {
