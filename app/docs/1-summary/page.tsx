@@ -15,22 +15,41 @@ export default function StoryPage() {
       </div> */}
 
       {/* Costs: Question 1 */}
-      <h3 className="text-lg text-[#5E2605]/80">Q: What Problems does Nerite Perps Solve?</h3>
+      <h3 className="text-lg text-[#5E2605]/80">Q: What is our main purpose for Chainlink CRE?</h3>
 
       {/* Costs: Answer 1 */}
       <pre className="font-mono text-sm text-[#5E2605]/80 bg-[#FFF5E1] p-4 rounded border-2 border-[#DC940F] whitespace-pre-wrap">
-      {`Nerite Perps is a composable integration of Nerite, Euler, Contango, Chainlink, and Uniswap:
-
-  - Nerite has more consistent & affordable funding rates than Hyperliquid for Long Positions.
-  - Euler has more consistent & affordable funding rates than Hyperliquid for Short Postiions.
-  - Contango cPerps allows Longs and Shorts to be executed with a familiar UX, while being built on top of Nerite and Euler Liquidity.
-  - Chainlink CRE provides innovative Limit Orders, which are executed based on the severity of market-wide liquidations, rather than price targets.
-  - Chainlink CRE provides an automated Liquity redemption mechanism, which optimizes the redemption of USND for underlying collateral when profitable.
-  - Chainlink SVR provides sustainable incentives for Short Postiions.
-  - More complex vault strategies can be built upon Nerite Perps, once the system is functional.
+      {`The following tweet is a common occurance in our markets:
       
-These solutions will bring growth to Nerite, and provide valuable tools for traders, while demonstrating the capacities of Chainlink CRE.`}
+  @WatcherGuru
+  JUST IN: $210,000,000 liquidated from the crypto market in the past 60 minutes.
+      
+Depending on which side of the market has been liquidated, this type of event represents itself as a very long wick in one direction, followed by a potential mean reversion trade. The mean reversion trade is not a promise, but it is an edge which directional traders currently do not have.
+      
+Traders can use Coinglass APIs to get the liquidation data, and run local trading bots to execute orders -- but, there is no onchain solution.
+
+CRE enables a regular retrieval of this data from the Coinglass API, at 5 minute intervals, allowing Limit Order execution to be triggered by the severity of liquidations.
+
+Potential use cases: 
+  - GMX frontend integration, as a custom order type.
+  - Aerodrome / Velodrome POL / Treasury Management tool for hedging LP Positions.
+  - Contango Perps Integration to create a better trading UI/UX for Money Markets.
+
+This presentation focuses on integrating CRE into Nerite, to increase directional trade volume, while giving traders a better edge.
+`}
       </pre>
+      {/* Clickable link just below the box */}
+<p className="text-sm text-[#5E2605]/80">
+  Source:&nbsp;
+  <a
+    href="https://docs.coinglass.com/reference/aggregated-liquidation-history"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline hover:text-[#DC940F]"
+  >
+    Coinglass API Documentation
+  </a>
+</p>
     </div>
   )
 } 

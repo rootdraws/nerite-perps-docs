@@ -27,7 +27,7 @@ Traders have access to Liquidation Aggregation Data on several analytics sites:
 - [Coinalize](https://coinalyze.net/bitcoin/liquidations/)
 - [Velo Liquidation Aggregate Indicator](https://velo.xyz/chart) 
 
-Chainlink CRE will transform this data into a stream, and make it actionable -- providing traders with a real edge for directional leverage.`}
+Chainlink CRE will make this data actionable -- providing traders with limit orders which are executed based aggregated directional liquidations.`}
       </pre>
 
       {/* CRE: Question 2 */}
@@ -37,11 +37,10 @@ Chainlink CRE will transform this data into a stream, and make it actionable -- 
 <pre className="font-mono text-sm text-[#5E2605]/80 bg-[#FFF5E1] p-4 rounded border-2 border-[#DC940F] whitespace-pre-wrap">
 {`A Custom Data Stream would be assembled through CRE as follows: 
 
-1. APIs for Liquidated Longs and Shorts would be gathered from CEXs like Binance and Bybit, specifically for BTC.
-2. Data would be pulled and computed every 5 minutes from these APIs.
-3. The sum of the data would also be recorded anew, every Hour.
-4. CRE would store the Maximal Values for Longs and Shorts, and those values would update existentially.
-5. A Range is defined, so that Max Values are set to -10 or +10.
+1. The Coinglass API pulls BTC Liquidation Data from all major CEXs every 5 minutes.
+3. The sum of the data would be calculated and used as a ranking on a scale in CRE.
+4. CRE logic would set $100m liquidated shorts as +1, and $100m liquidated longs as -1, and $200m liquidated shorts as +2, and $200m liquidated longs as -2.
+5. A Range is defined, -10 to 0 to +10.
 6. Zero represents no liquidations. 
 7. The resulting Data Stream would be a "Liquidation Seismograph" which oscilates between -10 and +10, depending on the severity of the liquidations for BTC within that Hour. 
 8. Users would be able to set Limit Orders based on the Hourly Liquidation Amplitude, which are calculated on each 5m Heartbeat.
